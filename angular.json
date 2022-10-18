@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "development-environment-ng-reactive-form-visualizer-workspace"
+    }
+  },
+  "defaultProject": "development-environment-ng-reactive-form-visualizer-workspace",
+  "cli": {
+    "analytics": "35b49762-dff3-46d5-a203-7b7abb693b79"
+  }
 }
