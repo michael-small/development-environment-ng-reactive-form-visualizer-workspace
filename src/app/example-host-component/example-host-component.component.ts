@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -13,6 +14,7 @@ import {
 })
 export class ExampleHostComponentComponent implements OnInit {
   formGroup!: FormGroup;
+  formArray!: FormArray;
 
   constructor(private fb: FormBuilder) {}
 
@@ -21,5 +23,12 @@ export class ExampleHostComponentComponent implements OnInit {
       id: new FormControl(1),
       name: new FormControl('', Validators.required),
     });
+
+    this.formArray = this.fb.array([
+      {
+        id: new FormControl(null),
+        name: new FormControl('', Validators.required),
+      },
+    ]);
   }
 }
