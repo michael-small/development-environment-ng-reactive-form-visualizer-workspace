@@ -1,3 +1,13 @@
 <div>
-  <pre>{{ formElement.value | json }}</pre>
+  <ng-container *ngIf="formElementType === 'FormGroup'; else isFormArray">
+    <p>{{ formElementName }}</p>
+    <pre>{{ formElement.value | json }}</pre>
+    <p>Valid: {{ formElement.valid }}</p>
+  </ng-container>
+
+  <ng-template #isFormArray>
+    <p>{{ formElementName }}</p>
+    <pre>{{ formElement.value | json }}</pre>
+    <p>Valid: {{ formElement.valid }}</p>
+  </ng-template>
 </div>

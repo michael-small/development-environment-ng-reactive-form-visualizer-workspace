@@ -12,6 +12,9 @@ export class FormVisualizerV1Component implements OnInit {
 
   formElementType: 'FormGroup' | 'FormArray';
 
+  @Input()
+  formElementName: string = 'Untitled FormElement';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -19,6 +22,6 @@ export class FormVisualizerV1Component implements OnInit {
       ? (this.formElementType = 'FormGroup')
       : (this.formElementType = 'FormArray');
 
-    console.log(this.formElementType);
+    console.log(this.formElement);
   }
 }

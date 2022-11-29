@@ -25,10 +25,14 @@ export class ExampleHostComponentComponent implements OnInit {
     });
 
     this.formArray = this.fb.array([
-      {
-        id: new FormControl(null),
+      new FormGroup({
+        id: new FormControl(1),
         name: new FormControl('', Validators.required),
-      },
+      }),
+      new FormGroup({
+        id: new FormControl(2),
+        name: new FormControl('', Validators.required),
+      }),
     ]);
   }
 }
